@@ -1,0 +1,23 @@
+/* any divs inside the div of id="Document" and has a blue background should have a hover effect that bounces the text up and down */
+.bg-blue-400:hover > div {
+  animation: bounce 0.5s infinite alternate;
+}
+.bg-blue-400:hover {
+  animation: grow 0.25s forwards;
+}
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.02);
+  }
+}
